@@ -198,5 +198,16 @@
       });
   
     });
+
+    // JavaScript to calculate or increment project count
+document.querySelectorAll('.project-image').forEach((image, index) => {
+  image.addEventListener('click', function() {
+    // Example calculation: Increment project counter when image is clicked
+    let countElement = document.getElementById(`project${index + 1}-count`);
+    let currentCount = parseInt(countElement.textContent);
+    countElement.textContent = currentCount + 1;
+  });
+});
+
   
   })();
